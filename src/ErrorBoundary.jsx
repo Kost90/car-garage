@@ -10,7 +10,7 @@ export function ErrorBoundary() {
           {error.status} {error.statusText}
         </h1>
         {error.data && <p className="text-gray-700">{error.data}</p>}
-        <Link to={'/'}>Go back to garage</Link>
+        <Link to={'/'} className='text-mainBlack hover:text-blue-500'>Go back to garage</Link>
       </div>
     );
   }
@@ -20,7 +20,7 @@ export function ErrorBoundary() {
       <div className="p-6">
         <h1 className="text-2xl font-bold text-red-600">Oops something went wrong.</h1>
         <p className="text-gray-700">{error.message}</p>
-        <Link to={'/'}>Go back to garage</Link>
+        <Link to={'/'} className='text-mainBlack hover:text-blue-500'>Go back to garage</Link>
       </div>
     );
   }
