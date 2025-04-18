@@ -25,7 +25,7 @@ export default function AddCarForm() {
 
   const onSubmit = async ({ plateNumber }) => {
     try {
-      plateNumber = plateNumber.toUpperCase();
+      plateNumber = plateNumber.replace(/\s/g, '').toUpperCase();
       setFormError(null);
       if (checkIfExistCar(plateNumber, cars)) {
         setFormError('Car already exist in Garage');
